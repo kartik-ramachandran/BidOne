@@ -1,11 +1,17 @@
-<h1>Hello, world!</h1>
-<form>
-  <div class="first-name-container">
-    <label for="FirstName">First name:</label>
-    <input type="text" id="FirstName" />
+<div class="row">
+  <div class="col-6">
+    <h1>Personal Information</h1>
+    <form>
+      <div class="mb-3">
+        <label for="FirstName" class="form-label">First name</label>
+        <input type="text" class="form-control" name="FirstName" id="FirstName" [(ngModel)]="FirstName">
+      </div>
+      <div class="mb-3">
+        <label for="LastName" class="form-label">Last name</label>
+        <input type="text" class="form-control" name="LastName" id="LastName" [(ngModel)]="LastName">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="OnSubmit()">Submit</button>
+      <button type="reset" class="ms-3 btn btn-danger">Cancel</button>
+    </form>
   </div>
-  <div class="last-name-container">
-    <label for="LastName">Last name:</label>
-    <input type="text" id="LastName" />
-  </div>
-</form>
+</div>

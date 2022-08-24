@@ -1,8 +1,13 @@
+using BidOne.Business;
+using BidOne.Json;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IJsonAction, JsonAction>();
+builder.Services.AddTransient<IWrite, Write>();
 
 var app = builder.Build();
 
